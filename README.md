@@ -1,4 +1,4 @@
-## Price monitoring
+## Twitter
 
 ## Usage
 
