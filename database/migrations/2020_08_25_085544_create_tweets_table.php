@@ -23,12 +23,6 @@ class CreateTweetsTable extends Migration
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
-
-//            $table->foreign('following_id')
-//                ->references('id')
-//                ->on('users')
-//                ->onDelete('cascade');
-
         });
     }
 
