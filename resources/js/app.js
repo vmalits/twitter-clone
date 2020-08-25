@@ -20,6 +20,9 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('app-timeline', require('./components/timeline/AppTimeline.vue').default);
+Vue.component('app-tweet', require('./components/tweets/AppTweet.vue').default);
+Vue.component('app-tweet-username', require('./components/tweets/AppTweetUsername.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

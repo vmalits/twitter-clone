@@ -105,4 +105,9 @@ class User extends Authenticatable
             'id', 'following_id'
         );
     }
+
+    public function avatar()
+    {
+        return 'https://gravatar.com/avatar/' . md5($this->email) . '?d=mp';
+    }
 }
