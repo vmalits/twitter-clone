@@ -10,6 +10,7 @@ import store from './store';
 import VueObserveVisibilityPlugin from 'vue-observe-visibility';
 
 window.Vue.use(VueObserveVisibilityPlugin);
+Vue.prototype.$user = User;
 
 /**
  * The following block of code may be used to automatically register your
@@ -26,6 +27,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('app-timeline', require('./components/timeline/AppTimeline.vue').default);
 Vue.component('app-tweet', require('./components/tweets/AppTweet.vue').default);
 Vue.component('app-tweet-username', require('./components/tweets/AppTweetUsername.vue').default);
+Vue.component('app-tweet-compose', require('./components/compose/AppTweetCompose.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
