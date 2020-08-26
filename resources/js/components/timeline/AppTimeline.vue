@@ -43,7 +43,6 @@ export default {
             })
         },
         handleScrolledToBottomOfTimeline(isVisible) {
-            console.log('scrolled');
             if (!isVisible) {
                 return;
             }
