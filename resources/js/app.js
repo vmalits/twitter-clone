@@ -4,9 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
 window.Vue = require('vue');
+
+import store from './store';
 
 /**
  * The following block of code may be used to automatically register your
@@ -31,5 +31,6 @@ Vue.component('app-tweet-username', require('./components/tweets/AppTweetUsernam
  */
 
 const app = new Vue({
+    store,
     el: '#app',
 });

@@ -7,21 +7,22 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
     name: 'AppTimeline',
-    data() {
-        return {
-            tweets: []
-        }
+    computed: {
+        ...mapGetters({
+            tweets: 'timeline/tweets'
+        })
+    },
+    methods: {
+        ...mapActions({
+            getTweets: 'timeline/getTweets'
+        })
     },
     mounted() {
         this.getTweets();
-    },
-    methods: {
-        async getTweets() {
-            let response = await axios.get('/api/timeline');
-            this.tweets = response.data.data;
-        }
     }
 }
 </script>
