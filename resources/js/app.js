@@ -7,6 +7,9 @@
 window.Vue = require('vue');
 
 import store from './store';
+import VueObserveVisibilityPlugin from 'vue-observe-visibility';
+
+window.Vue.use(VueObserveVisibilityPlugin);
 
 /**
  * The following block of code may be used to automatically register your
